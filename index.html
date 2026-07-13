@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bug Bounty Vault — 0xVanguard</title>
+  <title>Bug Bounty Vault — 0xVanguard | De Principiante a Élite</title>
+  <meta name="description" content="Plataforma educativa de inteligencia viva sobre Bug Bounty. De principiante a élite. Recursos, metodología, hunters top y guía para los primeros $1,000 USD." />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
@@ -13,61 +14,152 @@
 <canvas id="matrix-bg"></canvas>
 
 <!-- NAV -->
-<nav class="nav">
+<nav class="nav" id="main-nav">
   <span class="nav-logo">> BugBountyVault<span class="blink">_</span></span>
   <ul class="nav-links">
-    <li><a href="#filosofia">Filosofía</a></li>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#niveles">Niveles</a></li>
+    <li><a href="#filosofia">Mentalidad</a></li>
     <li><a href="#hunters">Hunters Élite</a></li>
     <li><a href="#metodologia">Metodología</a></li>
     <li><a href="#recursos">Recursos</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#tracker">Tracker $1K</a></li>
+    <li><a href="#tracker">Tracker</a></li>
     <li><a href="https://github.com/0xvanguard/bug-bounty-vault" target="_blank" class="nav-gh">GitHub ↗</a></li>
   </ul>
+  <button class="nav-mobile-btn" onclick="toggleMobileNav()">☰</button>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#niveles" onclick="closeMobileNav()">Niveles</a>
+  <a href="#filosofia" onclick="closeMobileNav()">Mentalidad</a>
+  <a href="#hunters" onclick="closeMobileNav()">Hunters</a>
+  <a href="#metodologia" onclick="closeMobileNav()">Metodología</a>
+  <a href="#recursos" onclick="closeMobileNav()">Recursos</a>
+  <a href="#roadmap" onclick="closeMobileNav()">Roadmap</a>
+  <a href="#tracker" onclick="closeMobileNav()">Tracker</a>
+</div>
 
 <!-- HERO -->
-<section class="hero" id="top">
+<section class="hero" id="inicio">
   <div class="hero-inner">
-    <p class="hero-tag">> PLATAFORMA DE INTELIGENCIA VIVA // NIVEL OMEGA</p>
+    <div class="hero-badge">🛡️ PLATAFORMA DE INTELIGENCIA VIVA // NIVEL OMEGA // BOGOTÁ, COLOMBIA</div>
     <h1 class="hero-title">BUG BOUNTY<br><span class="accent-g">VAULT</span></h1>
     <p class="hero-sub" id="hero-typed"></p>
     <div class="hero-stats">
       <div class="hstat">
-        <span class="hstat-n">$81M</span>
-        <span class="hstat-l">Pagados por H1 en 12 meses</span>
+        <span class="hstat-n">$81M+</span>
+        <span class="hstat-l">Pagados por HackerOne en 12 meses</span>
       </div>
       <div class="hstat">
         <span class="hstat-n">9+</span>
-        <span class="hstat-l">Hunters con $1M+ acumulado</span>
+        <span class="hstat-l">Hunters con más de $1M acumulado</span>
       </div>
       <div class="hstat">
-        <span class="hstat-n">200+</span>
-        <span class="hstat-l">Hackers con $100K+ ganados</span>
+        <span class="hstat-n">300+</span>
+        <span class="hstat-l">Hackers con más de $100K ganados</span>
       </div>
       <div class="hstat">
         <span class="hstat-n">$500</span>
-        <span class="hstat-l">Tu primer objetivo realista</span>
+        <span class="hstat-l">Tu primer objetivo real y alcanzable</span>
       </div>
     </div>
     <div class="hero-ctas">
-      <a href="#roadmap" class="btn-primary">> INICIAR RUTA</a>
-      <a href="#tracker" class="btn-outline">> TRACKER $1K</a>
+      <a href="#niveles" class="btn-primary">> VER MI NIVEL</a>
+      <a href="#roadmap" class="btn-outline">> ROADMAP 30 DÍAS</a>
+      <a href="#tracker" class="btn-outline-gold">> TRACKER $1K</a>
+    </div>
+    <div class="hero-scroll">↓ SCROLL PARA EXPLORAR</div>
+  </div>
+</section>
+
+<!-- AVISO DISCLAIMER -->
+<div class="disclaimer-bar">
+  ⚖️ Este vault es para investigación ética y responsable. Todo el conocimiento aquí es para ser aplicado únicamente en programas autorizados de bug bounty y entornos de laboratorio. Responsible Disclosure · CVD Compliant · OWASP · ISO/IEC 29147
+</div>
+
+<!-- NIVELES DE APRENDIZAJE -->
+<section class="section" id="niveles">
+  <div class="section-inner">
+    <p class="section-tag">// 00 — PUNTO DE PARTIDA</p>
+    <h2 class="section-title">¿En qué nivel estás?<span class="blink">_</span></h2>
+    <p class="section-sub">Bug Bounty no tiene un solo camino. Identifica tu punto de partida y sigue la ruta correcta para tu nivel actual.</p>
+    <div class="levels-grid">
+
+      <div class="level-card lv-beginner">
+        <div class="level-badge">🌱 PRINCIPIANTE</div>
+        <h3>0 — 3 meses</h3>
+        <p class="level-desc">Estás aprendiendo HTTP, Burp Suite y tus primeras vulnerabilidades. Aún no has enviado tu primer reporte.</p>
+        <div class="level-focus">Tu enfoque ahora:</div>
+        <ul class="level-list">
+          <li>PortSwigger Web Security Academy (gratis)</li>
+          <li>Instalar y configurar Burp Suite</li>
+          <li>Entender HTTP, cookies y sesiones</li>
+          <li>Aprender XSS básico e IDOR</li>
+          <li>Crear cuenta en HackerOne y Bugcrowd</li>
+        </ul>
+        <a href="#recursos" class="level-cta">Ver recursos para principiantes →</a>
+      </div>
+
+      <div class="level-card lv-intermediate">
+        <div class="level-badge">⚡ INTERMEDIO</div>
+        <h3>3 — 12 meses</h3>
+        <p class="level-desc">Ya enviaste algunos reportes. Entiendes los vectores comunes pero buscas consistencia en tus hallazgos.</p>
+        <div class="level-focus">Tu enfoque ahora:</div>
+        <ul class="level-list">
+          <li>Profundizar en recon (subfinder, amass, gau)</li>
+          <li>Dominar IDOR, BAC, Auth bypass</li>
+          <li>Construir checklist de testing propio</li>
+          <li>Escribir reportes de calidad profesional</li>
+          <li>Enfocar en 1 o 2 tipos de bugs</li>
+        </ul>
+        <a href="#metodologia" class="level-cta">Ver metodología avanzada →</a>
+      </div>
+
+      <div class="level-card lv-advanced">
+        <div class="level-badge">🔥 AVANZADO</div>
+        <h3>1 — 3 años</h3>
+        <p class="level-desc">Tienes payouts consistentes. Buscas bugs complejos, programas privados y especialización profunda.</p>
+        <div class="level-focus">Tu enfoque ahora:</div>
+        <ul class="level-list">
+          <li>SSRF, XXE, HTTP Smuggling, deserialization</li>
+          <li>Programas privados (invitaciones H1)</li>
+          <li>Automatización de recon con pipelines</li>
+          <li>Investigación de vulnerabilidades nuevas</li>
+          <li>Construir reputación pública y tooling</li>
+        </ul>
+        <a href="#hunters" class="level-cta">Estudiar hunters élite →</a>
+      </div>
+
+      <div class="level-card lv-elite">
+        <div class="level-badge">💎 ÉLITE</div>
+        <h3>3+ años</h3>
+        <p class="level-desc">Top 100 en plataformas. Ganas entre $50K y $500K+ al año. Creas herramientas, investigas y defines tendencias.</p>
+        <div class="level-focus">Tu enfoque ahora:</div>
+        <ul class="level-list">
+          <li>Research propio y CVEs</li>
+          <li>Programas de empresas FAANG</li>
+          <li>Construcción de tooling open source</li>
+          <li>Educación y escritura técnica</li>
+          <li>Escalado a consultoría de seguridad</li>
+        </ul>
+        <a href="#hunters" class="level-cta">Ver casos reales de élite →</a>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- FILOSOFIA -->
-<section class="section" id="filosofia">
+<section class="section dark-section" id="filosofia">
   <div class="section-inner">
-    <p class="section-tag">// 00 — MENTALIDAD</p>
-    <h2 class="section-title">Filosofía del Hunter<span class="blink">_</span></h2>
-    <p class="section-sub">Bug bounty no es un juego de suerte. Es un juego de sistema, paciencia y pensamiento lateral. Los que ganan dinero real tienen un modelo mental diferente.</p>
+    <p class="section-tag">// 01 — MENTALIDAD</p>
+    <h2 class="section-title">Filosofía del Hunter sin Límites<span class="blink">_</span></h2>
+    <p class="section-sub">Bug bounty no es un juego de suerte. Es un juego de sistema, paciencia y pensamiento lateral. Los que ganan dinero real tienen un modelo mental radicalmente diferente.</p>
     <div class="philosophy-grid">
       <div class="phi-card">
         <span class="phi-icon">🎯</span>
-        <h3>Un bug bien reportado vale más que 100 intentos mediocres</h3>
-        <p>Calidad sobre cantidad. Un reporte con PoC claro, impacto documentado y remediación concreta tiene 10 veces más probabilidad de ser pagado.</p>
+        <h3>Calidad > Cantidad</h3>
+        <p>Un reporte con PoC claro, impacto documentado y remediación concreta tiene 10x más probabilidad de ser pagado que diez reportes mediocres. El triage paga criterio, no volumen.</p>
       </div>
       <div class="phi-card">
         <span class="phi-icon">🔁</span>
@@ -76,34 +168,55 @@
       </div>
       <div class="phi-card">
         <span class="phi-icon">🧠</span>
-        <h3>Piensa como el desarrollador que cometió el error</h3>
-        <p>Cada vulnerabilidad fue un descuido humano. Entender qué asumió el dev, qué no validó, qué confió por defecto — ahí viven los bugs reales.</p>
+        <h3>Piensa como quien escribió el error</h3>
+        <p>Cada vulnerabilidad fue un descuido humano. Entender qué asumió el dev, qué no validó, qué confió por defecto — ahí viven los bugs reales que nadie más encuentra.</p>
       </div>
       <div class="phi-card">
-        <span class="phi-icon">📈</span>
+        <span class="phi-icon">📡</span>
         <h3>El recon es el 80% del juego</h3>
-        <p>Quien tiene mejor superficie de ataque tiene más oportunidades. El recon profundo revela endpoints, parámetros y funcionalidades que el 95% de hunters ignora.</p>
+        <p>Quien tiene mejor superficie de ataque tiene más oportunidades. El recon profundo revela endpoints, parámetros y funcionalidades que el 95% de hunters ignora completamente.</p>
       </div>
       <div class="phi-card">
         <span class="phi-icon">💀</span>
-        <h3>La duplicación es parte del proceso</h3>
-        <p>Cada N/A y duplicado es datos. Significa que ese vector existe. Cambia el ángulo, profundiza el contexto o busca la variante que nadie reportó aún.</p>
+        <h3>El N/A es inteligencia, no fracaso</h3>
+        <p>Cada N/A y duplicado es datos. Significa que ese vector existe. Cambia el ángulo, profundiza el contexto o busca la variante que nadie reportó aún. El N/A te acerca al válido.</p>
       </div>
       <div class="phi-card">
         <span class="phi-icon">⚡</span>
-        <h3>Especialización > generalización</h3>
-        <p>Los hunters top no hacen de todo. Dominan IDOR, o XSS avanzado, o lógica de negocio. Un nicho claro genera más dinero con menos esfuerzo.</p>
+        <h3>Especialización genera más dinero</h3>
+        <p>Los hunters top no hacen de todo. Dominan IDOR, o XSS avanzado, o lógica de negocio. Un nicho claro genera más dinero con menos esfuerzo y menos duplicados.</p>
       </div>
+      <div class="phi-card">
+        <span class="phi-icon">🌊</span>
+        <h3>La consistencia supera al talento</h3>
+        <p>No los más inteligentes ganan más. Ganan los más consistentes. 2 horas diarias de hunting enfocado durante 6 meses construye más criterio que 48 horas intensas esporádicas.</p>
+      </div>
+      <div class="phi-card">
+        <span class="phi-icon">📝</span>
+        <h3>Documentar es parte del hunting</h3>
+        <p>Los hunters que documentan sus hallazgos, patrones y procesos aprenden 3x más rápido. Tu libreta de notas es tu activo más valioso a largo plazo en este ecosistema.</p>
+      </div>
+      <div class="phi-card">
+        <span class="phi-icon">🔓</span>
+        <h3>Piensa sin límites impuestos</h3>
+        <p>Los hunters élite preguntan "¿qué pasaría si...?" de forma sistemática. No se limitan a lo que parece posible. Prueban lo que parece imposible. Ahí viven los bugs de $10,000+.</p>
+      </div>
+    </div>
+
+    <!-- Quote box -->
+    <div class="quote-box">
+      <div class="quote-text">"Los mejores hunters no son los que más saben. Son los que más preguntan, más documentan y más persisten en el mismo target hasta agotar cada vector posible."</div>
+      <div class="quote-attr">— Principio del Hunter Sistemático</div>
     </div>
   </div>
 </section>
 
 <!-- HUNTERS ÉLITE -->
-<section class="section dark-section" id="hunters">
+<section class="section" id="hunters">
   <div class="section-inner">
-    <p class="section-tag">// 01 — INTEL</p>
+    <p class="section-tag">// 02 — INTEL</p>
     <h2 class="section-title">Hunters Élite — Casos Reales<span class="blink">_</span></h2>
-    <p class="section-sub">Estudia a quienes ya ganaron. No para copiar superficialmente — para extraer su modelo mental, su metodología y sus patrones de éxito.</p>
+    <p class="section-sub">Estudia a quienes ya ganaron. No para copiar superficialmente — para extraer su modelo mental, su metodología y sus patrones de éxito replicables.</p>
     <div class="hunters-grid">
 
       <div class="hunter-card">
@@ -111,410 +224,637 @@
           <span class="hunter-icon">🏆</span>
           <div>
             <h3>@stbuehler</h3>
-            <span class="hunter-tag">HackerOne Top All-Time</span>
+            <span class="hunter-tag">HackerOne Top All-Time · $1M+</span>
           </div>
         </div>
-        <p>Uno de los hunters más prolíficos. Conocido por profundidad técnica, recon sistemático y reportes de alta calidad en programas privados.</p>
-        <div class="hunter-skills">
-          <span class="skill-tag">Web</span><span class="skill-tag">API</span><span class="skill-tag">Privados</span>
-        </div>
-        <div class="hunter-lesson">▶ Lección: La consistencia a largo plazo supera el golpe de suerte.</div>
+        <p>Uno de los hunters más prolíficos del mundo. Conocido por profundidad técnica extrema, recon sistemático y reportes de calidad élite en programas privados exclusivos.</p>
+        <div class="hunter-skills"><span class="skill-tag">Web</span><span class="skill-tag">API</span><span class="skill-tag">Privados</span><span class="skill-tag">Profundidad</span></div>
+        <div class="hunter-lesson">▶ Lección: La consistencia a largo plazo supera cualquier golpe de suerte.</div>
       </div>
 
       <div class="hunter-card">
         <div class="hunter-header">
-          <span class="hunter-icon">🎯</span>
+          <span class="hunter-icon">🎙️</span>
           <div>
-            <h3>@nahamsec</h3>
-            <span class="hunter-tag">$100K+ · Educador élite</span>
+            <h3>@nahamsec (Ben Sadeghipour)</h3>
+            <span class="hunter-tag">$100K+ · Educador · Streamer</span>
           </div>
         </div>
-        <p>Ben Sadeghipour. Hunter y educador. Famoso por recon sistemático, subdomain takeover y metodología reproducible. Streamer de bug bounty en vivo.</p>
-        <div class="hunter-skills">
-          <span class="skill-tag">Recon</span><span class="skill-tag">Subdomain</span><span class="skill-tag">Educación</span>
-        </div>
+        <p>Hunter y educador de clase mundial. Famoso por recon sistemático, subdomain takeover y metodología reproducible. Ha enseñado a miles de hunters a través de streams en vivo.</p>
+        <div class="hunter-skills"><span class="skill-tag">Recon</span><span class="skill-tag">Subdomain</span><span class="skill-tag">Educación</span><span class="skill-tag">Streaming</span></div>
         <div class="hunter-lesson">▶ Lección: Enseñar lo que sabes multiplica tu reputación y tus oportunidades.</div>
       </div>
 
       <div class="hunter-card">
         <div class="hunter-header">
-          <span class="hunter-icon">🔭</span>
+          <span class="hunter-icon">🔬</span>
           <div>
             <h3>@albinowax (James Kettle)</h3>
-            <span class="hunter-tag">PortSwigger Research · HTTP Desync</span>
+            <span class="hunter-tag">PortSwigger · HTTP Desync Discovery</span>
           </div>
         </div>
-        <p>Descubrió HTTP Request Smuggling a escala. Investigador de PortSwigger. Sus hallazgos redefinen categorías enteras de vulnerabilidades.</p>
-        <div class="hunter-skills">
-          <span class="skill-tag">HTTP Smuggling</span><span class="skill-tag">Research</span><span class="skill-tag">SSRF</span>
-        </div>
+        <p>Descubrió y documentó HTTP Request Smuggling a escala global. Investigador principal de PortSwigger. Sus hallazgos redefinen categorías enteras de vulnerabilidades web.</p>
+        <div class="hunter-skills"><span class="skill-tag">HTTP Smuggling</span><span class="skill-tag">Research</span><span class="skill-tag">SSRF</span><span class="skill-tag">Novel bugs</span></div>
         <div class="hunter-lesson">▶ Lección: Investigar categorías nuevas vale 100x más que explotar las conocidas.</div>
+      </div>
+
+      <div class="hunter-card">
+        <div class="hunter-header">
+          <span class="hunter-icon">🛠️</span>
+          <div>
+            <h3>@tomnomnom (Tom Hudson)</h3>
+            <span class="hunter-tag">Tooling maestro · Open source legend</span>
+          </div>
+        </div>
+        <p>Creador de waybackurls, assetfinder, gf, httprobe y decenas de herramientas que toda la comunidad usa diariamente. Su código automatiza el recon de miles de hunters globales.</p>
+        <div class="hunter-skills"><span class="skill-tag">Go</span><span class="skill-tag">Automatización</span><span class="skill-tag">Recon</span><span class="skill-tag">Open Source</span></div>
+        <div class="hunter-lesson">▶ Lección: Construir herramientas que otros usan te posiciona diferente en el ecosistema.</div>
+      </div>
+
+      <div class="hunter-card">
+        <div class="hunter-header">
+          <span class="hunter-icon">✍️</span>
+          <div>
+            <h3>@vickieli7 (Vickie Li)</h3>
+            <span class="hunter-tag">Autora · Bug Bounty Bootcamp</span>
+          </div>
+        </div>
+        <p>Autora del libro Bug Bounty Bootcamp (No Starch Press). Enfoque en XSS, lógica de negocio y comunicación clara de hallazgos. Referente esencial para hunters en etapa inicial.</p>
+        <div class="hunter-skills"><span class="skill-tag">XSS</span><span class="skill-tag">Lógica</span><span class="skill-tag">Escritura</span><span class="skill-tag">Educación</span></div>
+        <div class="hunter-lesson">▶ Lección: Saber explicar el bug es tan importante como encontrarlo.</div>
+      </div>
+
+      <div class="hunter-card">
+        <div class="hunter-header">
+          <span class="hunter-icon">🎓</span>
+          <div>
+            <h3>@InsiderPhD (Katie Paxton-Fear)</h3>
+            <span class="hunter-tag">PhD · API Security · Proceso público</span>
+          </div>
+        </div>
+        <p>Doctora en seguridad. Documenta su proceso de hunting en público de forma sistemática. Especializada en API security y control de acceso. Construyó comunidad a través de transparencia radical.</p>
+        <div class="hunter-skills"><span class="skill-tag">APIs</span><span class="skill-tag">Acceso</span><span class="skill-tag">Educación</span><span class="skill-tag">Transparencia</span></div>
+        <div class="hunter-lesson">▶ Lección: Compartir el proceso abiertamente construye credibilidad a largo plazo.</div>
       </div>
 
       <div class="hunter-card">
         <div class="hunter-header">
           <span class="hunter-icon">💰</span>
           <div>
-            <h3>@tomnomnom</h3>
-            <span class="hunter-tag">Tooling maestro · Open source</span>
+            <h3>@geekboy (Shubham Shah)</h3>
+            <span class="hunter-tag">$100K+ · Bugcrowd MVP</span>
           </div>
         </div>
-        <p>Tom Hudson. Creador de waybackurls, assetfinder, gf y decenas de herramientas estándar en la comunidad. Su tooling automatiza el recon de todos.</p>
-        <div class="hunter-skills">
-          <span class="skill-tag">Go</span><span class="skill-tag">Automatización</span><span class="skill-tag">Recon</span>
-        </div>
-        <div class="hunter-lesson">▶ Lección: Construir herramientas que otros usan te posiciona diferente en el ecosistema.</div>
+        <p>Uno de los hunters más conocidos en Bugcrowd. Experto en lógica de negocio, auth flaws y web hacking avanzado. Comenzó muy joven y construyó un nombre consistente en la comunidad.</p>
+        <div class="hunter-skills"><span class="skill-tag">Auth</span><span class="skill-tag">Business Logic</span><span class="skill-tag">Web</span></div>
+        <div class="hunter-lesson">▶ Lección: La edad no es una barrera. El sistema sí.</div>
       </div>
 
       <div class="hunter-card">
         <div class="hunter-header">
-          <span class="hunter-icon">🧠</span>
+          <span class="hunter-icon">⚡</span>
           <div>
-            <h3>@vickieli7</h3>
-            <span class="hunter-tag">Autora · Bug Bounty Bootcamp</span>
+            <h3>@jason_haddix</h3>
+            <span class="hunter-tag">Metodólogo maestro · BBH Founder</span>
           </div>
         </div>
-        <p>Vickie Li. Autora del libro Bug Bounty Bootcamp. Enfoque en XSS, lógica de negocio y comunicación clara de hallazgos. Referente para hunters en etapa inicial.</p>
-        <div class="hunter-skills">
-          <span class="skill-tag">XSS</span><span class="skill-tag">Lógica</span><span class="skill-tag">Escritura</span>
-        </div>
-        <div class="hunter-lesson">▶ Lección: Saber explicar el bug es tan importante como encontrarlo.</div>
-      </div>
-
-      <div class="hunter-card">
-        <div class="hunter-header">
-          <span class="hunter-icon">🚀</span>
-          <div>
-            <h3>@InsiderPhD</h3>
-            <span class="hunter-tag">PhD · Documentadora · Proceso abierto</span>
-          </div>
-        </div>
-        <p>Katie Paxton-Fear. Documenta su proceso de hunting en público. Especializada en API security y acceso a datos. Demostrando que la transparencia genera comunidad y oportunidades.</p>
-        <div class="hunter-skills">
-          <span class="skill-tag">APIs</span><span class="skill-tag">Acceso</span><span class="skill-tag">Educación</span>
-        </div>
-        <div class="hunter-lesson">▶ Lección: Compartir el proceso abiertamente construye credibilidad a largo plazo.</div>
+        <p>Creador de BugBountyHunter.com y referente en metodología de bug bounty. Sus presentaciones y listas de checklists son material de referencia para hunters de todos los niveles del mundo.</p>
+        <div class="hunter-skills"><span class="skill-tag">Metodología</span><span class="skill-tag">Recon</span><span class="skill-tag">Comunidad</span><span class="skill-tag">BBHF</span></div>
+        <div class="hunter-lesson">▶ Lección: Sistematizar el proceso vale más que el talento natural.</div>
       </div>
 
     </div>
 
+    <!-- How to study -->
     <div class="intel-box">
-      <p class="intel-title">> CÓMO ESTUDIAR A UN HUNTER</p>
+      <p class="intel-title">> CÓMO ESTUDIAR A UN HUNTER DE VERDAD</p>
       <div class="intel-grid">
-        <div class="intel-item"><span class="intel-num">01</span><div><strong>Lee sus writeups</strong> — HackerOne Disclosed, Medium, GitHub. Extrae el patrón mental, no solo el bug.</div></div>
-        <div class="intel-item"><span class="intel-num">02</span><div><strong>Mira su tooling</strong> — qué herramientas usa, en qué orden, con qué parámetros. Copia la metodología, no el resultado.</div></div>
-        <div class="intel-item"><span class="intel-num">03</span><div><strong>Observa sus targets</strong> — ¿Qué tipo de programas elige? ¿Privados o públicos? ¿Grandes o nicho?</div></div>
-        <div class="intel-item"><span class="intel-num">04</span><div><strong>Analiza sus reportes</strong> — Estructura, tono, PoC. Un buen reporte es una habilidad separable del hunting.</div></div>
+        <div class="intel-item"><span class="intel-num">01</span><div><strong>Lee todos sus writeups publicados</strong><p>HackerOne Disclosed, Medium, GitHub, blogs personales. Extrae el patrón mental, no solo el bug específico.</p></div></div>
+        <div class="intel-item"><span class="intel-num">02</span><div><strong>Analiza su tooling con detalle</strong><p>Qué herramientas usa, en qué orden, con qué parámetros. Replica su pipeline de recon antes de replicar sus bugs.</p></div></div>
+        <div class="intel-item"><span class="intel-num">03</span><div><strong>Observa qué programas elige</strong><p>¿Privados o públicos? ¿Grandes o nicho? ¿Con qué severidad media? Sus elecciones revelan su estrategia real.</p></div></div>
+        <div class="intel-item"><span class="intel-num">04</span><div><strong>Estudia la estructura de sus reportes</strong><p>Estructura, tono, PoC, impacto. Un buen reporte es una habilidad completamente separable del hunting técnico.</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- METODOLOGÍA -->
-<section class="section" id="metodologia">
+<section class="section dark-section" id="metodologia">
   <div class="section-inner">
-    <p class="section-tag">// 02 — METODOLOGÍA</p>
-    <h2 class="section-title">Sistema de Ataque en 4 Fases<span class="blink">_</span></h2>
-    <p class="section-sub">No improvisación. Un sistema repetible que puedas ejecutar en cualquier programa sin perder tiempo o dirección.</p>
+    <p class="section-tag">// 03 — METODOLOGÍA</p>
+    <h2 class="section-title">Sistema de Ataque Profesional<span class="blink">_</span></h2>
+    <p class="section-sub">No improvisación. Un sistema repetible que puedas ejecutar en cualquier programa sin perder tiempo o dirección. Esto es lo que separa al amateur del profesional.</p>
+
+    <!-- Fases -->
     <div class="method-grid">
       <div class="method-card">
         <div class="method-phase">FASE 01</div>
         <h3 class="method-title">🔍 Reconocimiento Pasivo</h3>
         <ul class="method-list">
           <li>Subdomain enumeration (subfinder, amass, assetfinder)</li>
-          <li>Certificate Transparency (crt.sh)</li>
-          <li>Wayback Machine (waybackurls, gau)</li>
-          <li>Shodan / Censys para infra expuesta</li>
-          <li>theHarvester para emails y dominios</li>
-          <li>Google Dorks estratégicos</li>
+          <li>Certificate Transparency logs (crt.sh, certspotter)</li>
+          <li>Wayback Machine (waybackurls, gau, katana)</li>
+          <li>Shodan / Censys para infraestructura expuesta</li>
+          <li>theHarvester para emails y subdominios</li>
+          <li>Google Dorks estratégicos (site:, inurl:, ext:)</li>
+          <li>WHOIS y registros DNS históricos</li>
         </ul>
-        <div class="method-output">Output: lista de subdominios, endpoints históricos, infra expuesta</div>
+        <div class="method-output">Output → lista subdominios, endpoints históricos, infra expuesta</div>
       </div>
       <div class="method-card">
         <div class="method-phase">FASE 02</div>
         <h3 class="method-title">📡 Enumeración de Superficie</h3>
         <ul class="method-list">
-          <li>httpx para validar hosts vivos</li>
-          <li>ffuf / feroxbuster para directorios</li>
-          <li>Nuclei para templates automáticos</li>
-          <li>API endpoint discovery</li>
-          <li>Parámetros ocultos (arjun, x8)</li>
-          <li>JS recon (linkfinder, getJS)</li>
+          <li>httpx para validar hosts activos y tech stack</li>
+          <li>ffuf / feroxbuster para content discovery</li>
+          <li>Nuclei con templates de exposición</li>
+          <li>API endpoint discovery (katana, hakrawler)</li>
+          <li>Parámetros ocultos (arjun, x8, paramspider)</li>
+          <li>JS recon (linkfinder, getJS, subjs)</li>
+          <li>Mapeo de funcionalidades y roles de usuario</li>
         </ul>
-        <div class="method-output">Output: mapa de funcionalidades, APIs, rutas y parámetros</div>
+        <div class="method-output">Output → mapa completo de funcionalidades, APIs, rutas y params</div>
       </div>
       <div class="method-card">
         <div class="method-phase">FASE 03</div>
         <h3 class="method-title">⚡ Explotación Controlada</h3>
         <ul class="method-list">
           <li>XSS — reflejado, almacenado, DOM-based</li>
-          <li>IDOR — IDs directos, GUIDs, tokens</li>
-          <li>Broken Access Control — roles, funciones</li>
-          <li>Auth bypass — JWT, session, tokens</li>
-          <li>SSRF — SSRFs internos y en cloud</li>
-          <li>Business logic flaws — flujos de pago, estados</li>
+          <li>IDOR — IDs directos, GUIDs, hashed IDs</li>
+          <li>Broken Access Control — roles, endpoints, funciones</li>
+          <li>Auth bypass — JWT, sesión, tokens de reset</li>
+          <li>SSRF — internos, cloud metadata, blind</li>
+          <li>Business logic flaws — flujos, estados, cupones</li>
+          <li>Information disclosure — errores, endpoints, headers</li>
         </ul>
-        <div class="method-output">Output: PoC reproducible, request/response documentado</div>
+        <div class="method-output">Output → PoC reproducible, request/response documentado en Burp</div>
       </div>
       <div class="method-card">
         <div class="method-phase">FASE 04</div>
-        <h3 class="method-title">📋 Reporte Profesional</h3>
+        <h3 class="method-title">📋 Reporte de Calidad</h3>
         <ul class="method-list">
-          <li>Título claro: [Bug] en [feature] permite [impacto]</li>
-          <li>Pasos para reproducir exactos y ordenados</li>
-          <li>CVSS score estimado (v3.1)</li>
+          <li>Título: [Bug] en [feature] permite [impacto concreto]</li>
+          <li>Pasos para reproducir: exactos, ordenados, sin ambigüedad</li>
+          <li>CVSS v3.1 score estimado con justificación</li>
           <li>CWE relacionado</li>
           <li>Impacto cuantificado para el negocio</li>
-          <li>Remediación concreta y accionable</li>
+          <li>Evidencia: capturas, requests, videos de PoC</li>
+          <li>Remediación: concreta, técnica y accionable</li>
         </ul>
-        <div class="method-output">Output: reporte que el triage puede validar en minutos</div>
+        <div class="method-output">Output → reporte que el triage puede validar y pagar en minutos</div>
       </div>
     </div>
 
-    <!-- Bugs prioritarios -->
+    <!-- Bugs table -->
     <div class="bugs-section">
-      <h3 class="bugs-title">> BUGS PRIORITARIOS PARA PRIMEROS PAYOUTS</h3>
-      <div class="bugs-grid">
-        <div class="bug-item b-high"><span class="bug-icon">🟥</span><div><strong>IDOR</strong><p>Acceso no autorizado a recursos ajenos via IDs. Alto impacto, fácil demostración.</p></div></div>
-        <div class="bug-item b-high"><span class="bug-icon">🟥</span><div><strong>Broken Access Control</strong><p>Funciones de admin accesibles sin rol. Cambio de roles, acceso a datos de otros usuarios.</p></div></div>
-        <div class="bug-item b-med"><span class="bug-icon">🟧</span><div><strong>XSS Stored</strong><p>Ejecución de JS en el contexto de otros usuarios. Escalable a robo de sesión.</p></div></div>
-        <div class="bug-item b-med"><span class="bug-icon">🟧</span><div><strong>Auth Bypass</strong><p>Acceso sin credenciales válidas por fallos en JWT, sesión o tokens de reset.</p></div></div>
-        <div class="bug-item b-med"><span class="bug-icon">🟧</span><div><strong>Business Logic</strong><p>Flujos de negocio rotos: compras gratis, estados inválidos, cupones ilimitados.</p></div></div>
-        <div class="bug-item b-low"><span class="bug-icon">🟨</span><div><strong>Information Disclosure</strong><p>Datos sensibles expuestos en respuestas, errores o archivos accesibles.</p></div></div>
+      <h3 class="bugs-title">> MAPA DE BUGS: IMPACTO vs DIFICULTAD</h3>
+      <div class="bugs-full-grid">
+        <div class="bug-row bug-header">
+          <span>Vulnerabilidad</span><span>Dificultad</span><span>Impacto típico</span><span>Rango de pago</span><span>¿Por dónde empezar?</span>
+        </div>
+        <div class="bug-row"><span>IDOR</span><span class="diff-easy">Baja</span><span>Alto</span><span class="pay">$200 – $5,000</span><span>Manipular IDs numéricos en endpoints de perfil, pedidos, datos</span></div>
+        <div class="bug-row"><span>Broken Access Control</span><span class="diff-easy">Baja-Media</span><span>Alto</span><span class="pay">$200 – $10,000</span><span>Acceder a rutas de admin sin rol, cambiar parámetros de rol</span></div>
+        <div class="bug-row"><span>XSS Stored</span><span class="diff-med">Media</span><span>Alto</span><span class="pay">$100 – $3,000</span><span>Inputs sin sanitización: comentarios, nombres, bio, campos de texto</span></div>
+        <div class="bug-row"><span>Auth Bypass</span><span class="diff-med">Media</span><span>Crítico</span><span class="pay">$500 – $20,000</span><span>JWT sin verificar, tokens de reset predecibles, OAuth flaws</span></div>
+        <div class="bug-row"><span>Business Logic</span><span class="diff-med">Media</span><span>Medio-Alto</span><span class="pay">$300 – $8,000</span><span>Flujos de pago, cupones, estados de pedido, cantidad negativa</span></div>
+        <div class="bug-row"><span>SSRF</span><span class="diff-hard">Alta</span><span>Crítico</span><span class="pay">$1,000 – $50,000</span><span>Parámetros URL, webhooks, importadores de archivos externos</span></div>
+        <div class="bug-row"><span>XXE</span><span class="diff-hard">Alta</span><span>Crítico</span><span class="pay">$1,000 – $30,000</span><span>Upload de XML, SOAP endpoints, SVG parsing</span></div>
+        <div class="bug-row"><span>Info Disclosure</span><span class="diff-easy">Baja</span><span>Bajo-Medio</span><span class="pay">$50 – $1,000</span><span>Archivos .git, .env, errores verbosos, endpoints de debug</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- RECURSOS -->
-<section class="section dark-section" id="recursos">
+<section class="section" id="recursos">
   <div class="section-inner">
-    <p class="section-tag">// 03 — RECURSOS</p>
-    <h2 class="section-title">Arsenal de Conocimiento<span class="blink">_</span></h2>
-    <p class="section-sub">Solo los recursos que realmente importan. Sin ruido. Curados por impacto real en el proceso de hunting.</p>
+    <p class="section-tag">// 04 — RECURSOS</p>
+    <h2 class="section-title">Arsenal Completo de Conocimiento<span class="blink">_</span></h2>
+    <p class="section-sub">Solo los recursos que realmente importan. Curados por impacto real en el proceso de hunting. Sin ruido, sin relleno.</p>
 
-    <div class="resources-grid">
-
-      <div class="resource-col">
-        <h3 class="res-col-title">📚 Libros & PDFs</h3>
-        <div class="res-list">
-          <div class="res-item">
-            <span class="res-icon">📕</span>
-            <div>
-              <strong>Real-World Bug Hunting</strong>
-              <p>Peter Yaworski. El libro más práctico de bug bounty. Casos reales, programas reales.</p>
-              <a href="https://nostarch.com/bughunting" target="_blank" class="res-link">Ver →</a>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">📗</span>
-            <div>
-              <strong>Bug Bounty Bootcamp</strong>
-              <p>Vickie Li. Desde cero hasta reporting profesional. Ideal para estructura inicial.</p>
-              <a href="https://nostarch.com/bug-bounty-bootcamp" target="_blank" class="res-link">Ver →</a>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">📘</span>
-            <div>
-              <strong>OWASP Testing Guide</strong>
-              <p>El estándar global de pruebas de seguridad web. Referencia técnica permanente.</p>
-              <a href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" class="res-link">Ver →</a>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">📙</span>
-            <div>
-              <strong>Web App Hacker's Handbook</strong>
-              <p>Profundidad técnica en ataques web. Para entender el cómo y el porqué de cada vector.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="resource-col">
-        <h3 class="res-col-title">🎓 Plataformas & Laboratorios</h3>
-        <div class="res-list">
-          <div class="res-item">
-            <span class="res-icon">🌐</span>
-            <div>
-              <strong>PortSwigger Web Security Academy</strong>
-              <p>El mejor laboratorio gratuito del mundo. Cubre todos los vectores críticos con labs prácticos.</p>
-              <a href="https://portswigger.net/web-security" target="_blank" class="res-link">Acceder →</a>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">🏋️</span>
-            <div>
-              <strong>PentesterLab</strong>
-              <p>Labs reales, certificaciones, progresión estructurada. Pro vale cada dólar.</p>
-              <a href="https://pentesterlab.com" target="_blank" class="res-link">Acceder →</a>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">🎯</span>
-            <div>
-              <strong>HackTheBox Academy</strong>
-              <p>Path de Bug Bounty Hunter certificado. Técnico y estructurado.</p>
-              <a href="https://academy.hackthebox.com" target="_blank" class="res-link">Acceder →</a>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">🐛</span>
-            <div>
-              <strong>BugBountyHunter</strong>
-              <p>Metodología, writeups y comunidad. Creado por Jason Haddix.</p>
-              <a href="https://www.bugbountyhunter.com" target="_blank" class="res-link">Acceder →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="resource-col">
-        <h3 class="res-col-title">🛠️ Extensiones & Herramientas</h3>
-        <div class="res-list">
-          <div class="res-item">
-            <span class="res-icon">🔌</span>
-            <div>
-              <strong>Extensiones navegador</strong>
-              <p>Wappalyzer · FoxyProxy · Cookie-Editor · JSON Viewer · DOM Invader · Shodan ext</p>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">🔧</span>
-            <div>
-              <strong>Recon activo</strong>
-              <p>subfinder · amass · httpx · ffuf · nuclei · katana · gau · waybackurls · hakrawler</p>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">⚡</span>
-            <div>
-              <strong>Testing</strong>
-              <p>Burp Suite · dalfox · sqlmap · kxss · jwt-tool · arjun · x8 · qsreplace</p>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">📡</span>
-            <div>
-              <strong>OSINT</strong>
-              <p>Shodan · Censys · crt.sh · theHarvester · dnsx · chaos</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="resource-col">
-        <h3 class="res-col-title">🏆 Plataformas de Bug Bounty</h3>
-        <div class="res-list">
-          <div class="res-item">
-            <span class="res-icon">🟢</span>
-            <div>
-              <strong>HackerOne</strong>
-              <p>La más grande. Programas privados y públicos. Reputación pública. Meta: H1-1337.</p>
-              <a href="https://hackerone.com" target="_blank" class="res-link">Ir →</a>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">🔵</span>
-            <div>
-              <strong>Bugcrowd</strong>
-              <p>Excelente para web, API y mobile. Good ratio de programas para principiantes.</p>
-              <a href="https://bugcrowd.com" target="_blank" class="res-link">Ir →</a>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">🟠</span>
-            <div>
-              <strong>Intigriti</strong>
-              <p>Fuerte en Europa. Programas de calidad, triagers activos y payouts justos.</p>
-              <a href="https://intigriti.com" target="_blank" class="res-link">Ir →</a>
-            </div>
-          </div>
-          <div class="res-item">
-            <span class="res-icon">⚡</span>
-            <div>
-              <strong>Open Bug Bounty</strong>
-              <p>Programas VDP gratuitos. Ideal para primeros reportes sin presión de pago.</p>
-              <a href="https://openbugbounty.org" target="_blank" class="res-link">Ir →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <!-- Tabs -->
+    <div class="resource-tabs">
+      <button class="rtab active" onclick="showTab('libros')">📚 Libros</button>
+      <button class="rtab" onclick="showTab('labs')">🧪 Labs</button>
+      <button class="rtab" onclick="showTab('herramientas')">🛠️ Herramientas</button>
+      <button class="rtab" onclick="showTab('extensiones')">🔌 Extensiones</button>
+      <button class="rtab" onclick="showTab('plataformas')">🏆 Plataformas</button>
+      <button class="rtab" onclick="showTab('comunidad')">💬 Comunidad</button>
     </div>
+
+    <div class="tab-content active" id="tab-libros">
+      <div class="resources-grid">
+        <div class="res-item-big">
+          <span class="res-icon-big">📕</span>
+          <div>
+            <strong>Real-World Bug Hunting</strong><span class="res-level beginner-tag">Principiante</span>
+            <p>Peter Yaworski. El libro más práctico de bug bounty. Casos reales, programas reales, vulnerabilidades reales. Lectura obligatoria para empezar.</p>
+            <a href="https://nostarch.com/bughunting" target="_blank" class="res-link">Ver en No Starch Press →</a>
+          </div>
+        </div>
+        <div class="res-item-big">
+          <span class="res-icon-big">📗</span>
+          <div>
+            <strong>Bug Bounty Bootcamp</strong><span class="res-level beginner-tag">Principiante</span>
+            <p>Vickie Li. Desde cero hasta reporting profesional con estructura. El mejor libro para construir base sólida con metodología desde el inicio.</p>
+            <a href="https://nostarch.com/bug-bounty-bootcamp" target="_blank" class="res-link">Ver en No Starch Press →</a>
+          </div>
+        </div>
+        <div class="res-item-big">
+          <span class="res-icon-big">📘</span>
+          <div>
+            <strong>OWASP Testing Guide v4.2</strong><span class="res-level inter-tag">Intermedio</span>
+            <p>El estándar global de pruebas de seguridad web. Referencia técnica permanente. Gratuito. Cubre todos los vectores de ataque web con metodología detallada.</p>
+            <a href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" class="res-link">Ver gratis en OWASP →</a>
+          </div>
+        </div>
+        <div class="res-item-big">
+          <span class="res-icon-big">📙</span>
+          <div>
+            <strong>The Web Application Hacker's Handbook</strong><span class="res-level inter-tag">Intermedio</span>
+            <p>Profundidad técnica en ataques web. Para entender el cómo y el porqué de cada vector. Clásico indispensable para construir criterio real.</p>
+          </div>
+        </div>
+        <div class="res-item-big">
+          <span class="res-icon-big">📓</span>
+          <div>
+            <strong>Hacking: The Art of Exploitation</strong><span class="res-level adv-tag">Avanzado</span>
+            <p>Jon Erickson. Fundamentos de bajo nivel: stack, memoria, shellcoding. Para hunters que quieren entender la base técnica profunda de la explotación.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-labs">
+      <div class="resources-grid">
+        <div class="res-item-big">
+          <span class="res-icon-big">🌐</span>
+          <div>
+            <strong>PortSwigger Web Security Academy</strong><span class="res-level beginner-tag">Todos los niveles</span>
+            <p>El mejor laboratorio gratuito del mundo. Más de 250 labs que cubren todos los vectores críticos. Obligatorio para cualquier hunter serio. GRATIS.</p>
+            <a href="https://portswigger.net/web-security" target="_blank" class="res-link">Acceder gratis →</a>
+          </div>
+        </div>
+        <div class="res-item-big">
+          <span class="res-icon-big">🏋️</span>
+          <div>
+            <strong>PentesterLab</strong><span class="res-level inter-tag">Intermedio</span>
+            <p>Labs reales, certificaciones progresivas, badge system. La versión Pro vale cada dólar. Excelente para construir portafolio técnico verificable.</p>
+            <a href="https://pentesterlab.com" target="_blank" class="res-link">Ver PentesterLab →</a>
+          </div>
+        </div>
+        <div class="res-item-big">
+          <span class="res-icon-big">💎</span>
+          <div>
+            <strong>HackTheBox Academy — Bug Bounty Hunter Path</strong><span class="res-level inter-tag">Intermedio</span>
+            <p>Path certificado de Bug Bounty Hunter. Técnico, estructurado y progresivo. Reconocido por la industria y buen punto de referencia para empleadores.</p>
+            <a href="https://academy.hackthebox.com" target="_blank" class="res-link">Ver HTB Academy →</a>
+          </div>
+        </div>
+        <div class="res-item-big">
+          <span class="res-icon-big">🐛</span>
+          <div>
+            <strong>BugBountyHunter.com</strong><span class="res-level beginner-tag">Principiante-Inter.</span>
+            <p>Metodología, writeups, comunidad y labs. Creado por Jason Haddix. Perfecto para contexto real de cómo se hace el hunting en la práctica diaria.</p>
+            <a href="https://www.bugbountyhunter.com" target="_blank" class="res-link">Ver BBH →</a>
+          </div>
+        </div>
+        <div class="res-item-big">
+          <span class="res-icon-big">🎯</span>
+          <div>
+            <strong>TryHackMe — Web Fundamentals</strong><span class="res-level beginner-tag">Principiante</span>
+            <p>Ideal para empezar desde cero. Interfaz guiada, laboratorios interactivos y progresión clara. El mejor punto de entrada si no tienes base técnica aún.</p>
+            <a href="https://tryhackme.com" target="_blank" class="res-link">Ver TryHackMe →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-herramientas">
+      <div class="tools-categories">
+        <div class="tool-cat">
+          <h4 class="tool-cat-title">🔍 Recon & Subdomain</h4>
+          <div class="tool-list">
+            <div class="tool-item"><code>subfinder</code><p>Enumeración pasiva rápida de subdominios via fuentes OSINT</p></div>
+            <div class="tool-item"><code>amass</code><p>Enumeración activa/pasiva avanzada con soporte de graph</p></div>
+            <div class="tool-item"><code>assetfinder</code><p>Subdominios simples y rápidos de múltiples fuentes</p></div>
+            <div class="tool-item"><code>httpx</code><p>Validar hosts activos, tech stack, status codes en bulk</p></div>
+            <div class="tool-item"><code>dnsx</code><p>Resolución DNS masiva y rápida con múltiples resolvers</p></div>
+          </div>
+        </div>
+        <div class="tool-cat">
+          <h4 class="tool-cat-title">📂 Content Discovery</h4>
+          <div class="tool-list">
+            <div class="tool-item"><code>ffuf</code><p>Fuzzing rápido de directorios, parámetros y virtual hosts</p></div>
+            <div class="tool-item"><code>feroxbuster</code><p>Content discovery recursivo con soporte de filtros avanzados</p></div>
+            <div class="tool-item"><code>gau</code><p>Recolectar URLs de Wayback, OTX y otros archivos pasivos</p></div>
+            <div class="tool-item"><code>katana</code><p>Crawler moderno con soporte de JS rendering y pipelines</p></div>
+            <div class="tool-item"><code>arjun</code><p>Descubrimiento de parámetros HTTP ocultos en endpoints</p></div>
+          </div>
+        </div>
+        <div class="tool-cat">
+          <h4 class="tool-cat-title">⚡ Testing & Explotación</h4>
+          <div class="tool-list">
+            <div class="tool-item"><code>Burp Suite</code><p>El proxy definitivo. Proxy, Scanner, Repeater, Intruder</p></div>
+            <div class="tool-item"><code>nuclei</code><p>Scanner de vulnerabilidades basado en templates YAML</p></div>
+            <div class="tool-item"><code>dalfox</code><p>XSS scanner avanzado y PoC generator automatizado</p></div>
+            <div class="tool-item"><code>sqlmap</code><p>Detección y explotación automática de SQL injection</p></div>
+            <div class="tool-item"><code>jwt-tool</code><p>Análisis, fuzzing y explotación de JSON Web Tokens</p></div>
+          </div>
+        </div>
+        <div class="tool-cat">
+          <h4 class="tool-cat-title">🌐 OSINT</h4>
+          <div class="tool-list">
+            <div class="tool-item"><code>Shodan</code><p>Búsqueda de infraestructura expuesta en internet</p></div>
+            <div class="tool-item"><code>Censys</code><p>Escaner de internet para certificados e infraestructura</p></div>
+            <div class="tool-item"><code>theHarvester</code><p>Recolección de emails, subdominios y hosts via OSINT</p></div>
+            <div class="tool-item"><code>crt.sh</code><p>Certificate Transparency logs para descubrir subdominios</p></div>
+            <div class="tool-item"><code>chaos</code><p>Dataset de subdominios de ProjectDiscovery (actualizado)</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-extensiones">
+      <div class="ext-grid">
+        <div class="ext-card">
+          <div class="ext-icon">🔍</div>
+          <strong>Wappalyzer</strong>
+          <p>Detecta el tech stack del sitio: frameworks, CMS, lenguajes, servidores. Fundamental para orientar el hunting.</p>
+          <span class="ext-tag">Recon</span>
+        </div>
+        <div class="ext-card">
+          <div class="ext-icon">🌐</div>
+          <strong>FoxyProxy</strong>
+          <p>Gestiona múltiples proxies con un clic. Esencial para redirigir tráfico a Burp Suite cómodamente.</p>
+          <span class="ext-tag">Proxy</span>
+        </div>
+        <div class="ext-card">
+          <div class="ext-icon">🍪</div>
+          <strong>Cookie-Editor</strong>
+          <p>Ver, editar y manipular cookies directamente desde el navegador. Útil para session testing y auth bypass.</p>
+          <span class="ext-tag">Auth</span>
+        </div>
+        <div class="ext-card">
+          <div class="ext-icon">{}</div>
+          <strong>JSON Viewer</strong>
+          <p>Formatea y explora respuestas JSON de APIs de forma legible. Clave para análisis de APIs REST.</p>
+          <span class="ext-tag">APIs</span>
+        </div>
+        <div class="ext-card">
+          <div class="ext-icon">💉</div>
+          <strong>DOM Invader</strong>
+          <p>Herramienta de Burp para encontrar DOM XSS y prototype pollution de forma semiautomática.</p>
+          <span class="ext-tag">XSS</span>
+        </div>
+        <div class="ext-card">
+          <div class="ext-icon">🔦</div>
+          <strong>Shodan Extension</strong>
+          <p>Consulta Shodan directamente desde el navegador al visitar cualquier host. Datos de infra al instante.</p>
+          <span class="ext-tag">OSINT</span>
+        </div>
+        <div class="ext-card">
+          <div class="ext-icon">🔗</div>
+          <strong>Link Gopher</strong>
+          <p>Extrae todos los links de una página. Útil para mapear rutas y endpoints rápidamente.</p>
+          <span class="ext-tag">Recon</span>
+        </div>
+        <div class="ext-card">
+          <div class="ext-icon">🕵️</div>
+          <strong>User-Agent Switcher</strong>
+          <p>Cambia el User-Agent para probar comportamientos distintos en móvil, bot, o crawler.</p>
+          <span class="ext-tag">Testing</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-plataformas">
+      <div class="platforms-grid">
+        <div class="platform-card">
+          <div class="plat-header">
+            <span class="plat-dot" style="background:#22c55e"></span>
+            <h3>HackerOne</h3>
+          </div>
+          <p>La plataforma de bug bounty más grande del mundo. Programas privados y públicos de empresas Fortune 500. Sistema de reputación público (H1-1337 es la meta de élite).</p>
+          <div class="plat-stats">
+            <span>$300M+ pagados históricamente</span>
+            <span>2,000+ programas activos</span>
+          </div>
+          <a href="https://hackerone.com" target="_blank" class="plat-btn">Ir a HackerOne ↗</a>
+        </div>
+        <div class="platform-card">
+          <div class="plat-header">
+            <span class="plat-dot" style="background:#38bdf8"></span>
+            <h3>Bugcrowd</h3>
+          </div>
+          <p>Excelente variedad de programas para web, API y mobile. Buena relación señal-ruido para principiantes. Sistema de trust score y clasificación de severity propia.</p>
+          <div class="plat-stats">
+            <span>$50M+ pagados</span>
+            <span>1,000+ programas</span>
+          </div>
+          <a href="https://bugcrowd.com" target="_blank" class="plat-btn">Ir a Bugcrowd ↗</a>
+        </div>
+        <div class="platform-card">
+          <div class="plat-header">
+            <span class="plat-dot" style="background:#f97316"></span>
+            <h3>Intigriti</h3>
+          </div>
+          <p>Líder en Europa. Programas de alta calidad, triagers activos, payouts justos y soporte real al hunter. Comunidad más pequeña pero mejor relación pago/reporte.</p>
+          <div class="plat-stats">
+            <span>Fuerte en empresas EU</span>
+            <span>Payouts competitivos</span>
+          </div>
+          <a href="https://intigriti.com" target="_blank" class="plat-btn">Ir a Intigriti ↗</a>
+        </div>
+        <div class="platform-card">
+          <div class="plat-header">
+            <span class="plat-dot" style="background:#a855f7"></span>
+            <h3>Immunefi</h3>
+          </div>
+          <p>Bug bounty para blockchain y web3. Los payouts más altos del mercado ($1M+ en algunos programas). Requiere conocimiento de Solidity, smart contracts y DeFi.</p>
+          <div class="plat-stats">
+            <span>$100M+ pagados</span>
+            <span>Mayor pago histórico: $10M</span>
+          </div>
+          <a href="https://immunefi.com" target="_blank" class="plat-btn">Ir a Immunefi ↗</a>
+        </div>
+        <div class="platform-card">
+          <div class="plat-header">
+            <span class="plat-dot" style="background:#eab308"></span>
+            <h3>Open Bug Bounty</h3>
+          </div>
+          <p>Programas VDP (Vulnerability Disclosure) gratuitos. Ideal para primeros reportes sin presión de duplicados ni pago. Perfecto para construir confianza en tu proceso.</p>
+          <div class="plat-stats">
+            <span>Gratuito para reportar</span>
+            <span>Sin programa privado</span>
+          </div>
+          <a href="https://openbugbounty.org" target="_blank" class="plat-btn">Ir a OBB ↗</a>
+        </div>
+        <div class="platform-card">
+          <div class="plat-header">
+            <span class="plat-dot" style="background:#ef4444"></span>
+            <h3>YesWeHack</h3>
+          </div>
+          <p>Plataforma europea de alta calidad. Programas de gobierno, fintech y enterprise. Excelente para hunters que quieren diversificar más allá de HackerOne y Bugcrowd.</p>
+          <div class="plat-stats">
+            <span>Fuerte en Europa/Asia</span>
+            <span>Gobierno + Enterprise</span>
+          </div>
+          <a href="https://yeswehack.com" target="_blank" class="plat-btn">Ir a YesWeHack ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-comunidad">
+      <div class="comm-grid">
+        <div class="comm-card">
+          <h4>💬 Discord / Comunidades</h4>
+          <ul>
+            <li><a href="https://discord.gg/tcstoolkit" target="_blank">TCS Toolkit Discord</a> — Comunidad técnica activa de hunters</li>
+            <li><a href="https://nahamsec.com" target="_blank">NahamSec Discord</a> — De las comunidades más activas</li>
+            <li><a href="https://discord.gg/bugbounty" target="_blank">Bug Bounty Official Discord</a></li>
+            <li>Reddit: r/bugbounty — Discusión, preguntas, recursos</li>
+          </ul>
+        </div>
+        <div class="comm-card">
+          <h4>📰 Blogs & Writeups</h4>
+          <ul>
+            <li><a href="https://hackerone.com/hacktivity" target="_blank">HackerOne Hacktivity</a> — Reportes públicos reales</li>
+            <li><a href="https://pentester.land/list-of-bug-bounty-writeups.html" target="_blank">Pentester.Land</a> — Lista curada de writeups</li>
+            <li><a href="https://portswigger.net/research" target="_blank">PortSwigger Research</a> — Investigación técnica élite</li>
+            <li>Medium: tags bugbounty, infosec, websecurity</li>
+          </ul>
+        </div>
+        <div class="comm-card">
+          <h4>🎥 YouTube / Canales</h4>
+          <ul>
+            <li>NahamSec — Metodología y streams en vivo</li>
+            <li>InsiderPhD — Proceso real y APIs</li>
+            <li>STÖK — Videos de lifestyle hunter y técnica</li>
+            <li>LiveOverflow — Explicaciones técnicas profundas</li>
+          </ul>
+        </div>
+        <div class="comm-card">
+          <h4>🐦 Twitter / X Esencial</h4>
+          <ul>
+            <li>@Hacker0x01 — Noticias y casos de HackerOne</li>
+            <li>@NahamSec — Tips, threads y recursos</li>
+            <li>@TomNomNom — Tooling y técnica</li>
+            <li>@albinowax — Research de vanguardia</li>
+            <li>@vickieli7 — Educación y writeups</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- ROADMAP -->
-<section class="section" id="roadmap">
+<section class="section dark-section" id="roadmap">
   <div class="section-inner">
-    <p class="section-tag">// 04 — ROADMAP</p>
-    <h2 class="section-title">Ruta de 30 Días hacia el Primer Payout<span class="blink">_</span></h2>
-    <p class="section-sub">Un plan diario ejecutable. No necesitas saber todo. Necesitas enfocarte en lo correcto en el momento correcto.</p>
+    <p class="section-tag">// 05 — ROADMAP</p>
+    <h2 class="section-title">Ruta de 30 Días al Primer Payout<span class="blink">_</span></h2>
+    <p class="section-sub">Un plan diario ejecutable. No necesitas saber todo. Necesitas enfocarte en lo correcto en el momento correcto. Este plan asume 2 horas diarias de trabajo enfocado.</p>
     <div class="roadmap-weeks">
       <div class="week-card">
-        <div class="week-badge">SEMANA 1</div>
-        <h3>Preparación del entorno</h3>
+        <div class="week-badge">SEMANA 1 · Días 1–7</div>
+        <h3>⚙️ Preparación del entorno</h3>
         <ul>
-          <li>✅ Instalar Burp Suite + configurar proxy</li>
-          <li>✅ Instalar extensiones del navegador</li>
-          <li>✅ Configurar Linux con herramientas recon</li>
-          <li>✅ Crear cuenta HackerOne + Bugcrowd</li>
-          <li>✅ Elegir 2–3 programas objetivo</li>
-          <li>✅ Leer las políticas de scope</li>
+          <li>✅ Instalar Burp Suite Community + configurar proxy</li>
+          <li>✅ Instalar extensiones del navegador (Wappalyzer, FoxyProxy, Cookie-Editor)</li>
+          <li>✅ Configurar Linux con herramientas de recon básicas</li>
+          <li>✅ Crear cuenta en HackerOne, Bugcrowd y Open Bug Bounty</li>
+          <li>✅ Completar 10 labs de PortSwigger (XSS, IDOR, Access Control)</li>
+          <li>✅ Elegir 2–3 programas con scope web claro</li>
+          <li>✅ Leer las políticas de scope con detalle</li>
         </ul>
       </div>
       <div class="week-card">
-        <div class="week-badge week2">SEMANA 2</div>
-        <h3>Recon profundo</h3>
+        <div class="week-badge week2">SEMANA 2 · Días 8–14</div>
+        <h3>🔍 Recon profundo</h3>
         <ul>
-          <li>⬜ Enumerar subdominios del target</li>
+          <li>⬜ Enumerar subdominios del target (subfinder + amass)</li>
           <li>⬜ Validar hosts vivos con httpx</li>
-          <li>⬜ Recolectar endpoints históricos</li>
-          <li>⬜ Mapear APIs y parámetros</li>
-          <li>⬜ Hacer JS recon</li>
-          <li>⬜ Documentar todo en notas</li>
+          <li>⬜ Recolectar endpoints históricos (gau, waybackurls)</li>
+          <li>⬜ Content discovery en subdominios (ffuf)</li>
+          <li>⬜ Mapear APIs y parámetros ocultos (arjun)</li>
+          <li>⬜ Hacer JS recon (linkfinder, getJS)</li>
+          <li>⬜ Documentar todo en notas organizadas</li>
         </ul>
       </div>
       <div class="week-card">
-        <div class="week-badge week3">SEMANA 3</div>
-        <h3>Testing manual</h3>
+        <div class="week-badge week3">SEMANA 3 · Días 15–21</div>
+        <h3>⚡ Testing manual</h3>
         <ul>
-          <li>⬜ Probar control de acceso por rol</li>
-          <li>⬜ Manipular IDs y parámetros</li>
-          <li>⬜ Probar flujos de autenticación</li>
-          <li>⬜ Inyecciones en inputs y headers</li>
+          <li>⬜ Probar control de acceso por rol (BAC)</li>
+          <li>⬜ Manipular IDs y parámetros (IDOR)</li>
+          <li>⬜ Probar flujos de autenticación y reset</li>
+          <li>⬜ Inyecciones básicas en inputs y headers</li>
           <li>⬜ Buscar lógica de negocio rota</li>
-          <li>⬜ Capturar requests con Burp</li>
+          <li>⬜ Capturar y analizar requests con Burp Repeater</li>
+          <li>⬜ Probar XSS en todos los inputs de texto</li>
         </ul>
       </div>
       <div class="week-card">
-        <div class="week-badge week4">SEMANA 4</div>
-        <h3>Reportes y submission</h3>
+        <div class="week-badge week4">SEMANA 4 · Días 22–30</div>
+        <h3>📤 Reportes y submission</h3>
         <ul>
-          <li>⬜ Escribir primer reporte con plantilla</li>
-          <li>⬜ Documentar PoC con capturas</li>
-          <li>⬜ Estimar CVSS</li>
-          <li>⬜ Enviar a la plataforma</li>
-          <li>⬜ Responder preguntas del triage</li>
-          <li>⬜ Analizar feedback y mejorar</li>
+          <li>⬜ Escribir primer reporte con plantilla profesional</li>
+          <li>⬜ Documentar PoC con capturas y requests</li>
+          <li>⬜ Estimar CVSS v3.1 con justificación</li>
+          <li>⬜ Enviar reporte a la plataforma</li>
+          <li>⬜ Responder preguntas del triage con contexto claro</li>
+          <li>⬜ Analizar el feedback y documentar aprendizaje</li>
+          <li>⬜ Iterar sobre el proceso y mejorarlo</li>
         </ul>
       </div>
     </div>
     <div class="roadmap-note">
       <span class="note-icon">💡</span>
-      <p><strong>Clave:</strong> No cambies de programa hasta haber revisado <em>toda</em> la superficie del primero. La profundidad en un target vale más que la amplitud en 20.</p>
+      <p><strong>Regla de oro:</strong> No cambies de programa hasta haber revisado <em>toda</em> la superficie del primero. La profundidad en un target vale mucho más que la amplitud superficial en 20 programas distintos. Los payouts vienen de la profundidad.</p>
+    </div>
+
+    <!-- Long term roadmap -->
+    <div class="longterm">
+      <h3 class="lt-title">> HOJA DE RUTA A LARGO PLAZO</h3>
+      <div class="lt-grid">
+        <div class="lt-item">
+          <span class="lt-time">Mes 1–3</span>
+          <h4>Primera validación</h4>
+          <p>Primer reporte válido. Primer bounty. $0 → $500. Entender el proceso completo de inicio a pago.</p>
+        </div>
+        <div class="lt-item">
+          <span class="lt-time">Mes 3–6</span>
+          <h4>Consistencia</h4>
+          <p>Payouts regulares. $500 → $2,000. Elegir 1-2 bugs de especialización. Construir pipeline de recon propio.</p>
+        </div>
+        <div class="lt-item">
+          <span class="lt-time">Mes 6–12</span>
+          <h4>Escalado</h4>
+          <p>Invitaciones a programas privados. $2,000 → $10,000. Automatización parcial del recon. Reputación creciente.</p>
+        </div>
+        <div class="lt-item">
+          <span class="lt-time">Año 1–2</span>
+          <h4>Profesionalización</h4>
+          <p>Bugs de alta severidad consistentes. $10,000 → $50,000. Tooling propio, writeups publicados, comunidad.</p>
+        </div>
+        <div class="lt-item">
+          <span class="lt-time">Año 2–3+</span>
+          <h4>Élite</h4>
+          <p>Top 200 en plataformas. $50,000+/año. Research propio, CVEs, educación, consultoría. El sistema escala solo.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- TRACKER -->
-<section class="section dark-section" id="tracker">
+<section class="section" id="tracker">
   <div class="section-inner">
-    <p class="section-tag">// 05 — TRACKER</p>
-    <h2 class="section-title">Tracker — Primeros $1,000 USD<span class="blink">_</span></h2>
-    <p class="section-sub">Seguimiento en tiempo real de tu progreso. Actualiza las variables en main.js con tus datos reales.</p>
+    <p class="section-tag">// 06 — TRACKER</p>
+    <h2 class="section-title">Tracker Personal — Primeros $1,000 USD<span class="blink">_</span></h2>
+    <p class="section-sub">Seguimiento en tiempo real de tu progreso hacia el primer milestone. Actualiza las variables en main.js con tus datos reales cada vez que hagas un progreso.</p>
 
     <div class="tracker-main">
       <div class="tracker-header">
@@ -527,7 +867,6 @@
       <div class="tracker-scale">
         <span>$0</span><span>$250</span><span>$500</span><span>$750</span><span>$1,000</span>
       </div>
-
       <div class="tracker-stats">
         <div class="tstat">
           <span class="tstat-n" id="t-reports">0</span>
@@ -549,14 +888,14 @@
     </div>
 
     <div class="milestones">
-      <h3 class="milestones-title">> HITOS</h3>
+      <h3 class="milestones-title">> HITOS DEL HUNTER</h3>
       <div class="milestone-list">
-        <div class="milestone" id="m1"><span class="m-check">⬜</span><div><strong>Primer reporte enviado</strong><p>El primer paso. Aunque sea N/A — aprendes del proceso.</p></div></div>
-        <div class="milestone" id="m2"><span class="m-check">⬜</span><div><strong>Primer reporte válido</strong><p>El triage lo acepta. Significa que tu criterio empieza a funcionar.</p></div></div>
-        <div class="milestone" id="m3"><span class="m-check">⬜</span><div><strong>Primer bounty cobrado</strong><p>El primer dólar real. A partir de aquí, el sistema está validado.</p></div></div>
-        <div class="milestone" id="m4"><span class="m-check">⬜</span><div><strong>$100 USD acumulados</strong><p>Prueba de repetibilidad. Ya no fue suerte.</p></div></div>
-        <div class="milestone" id="m5"><span class="m-check">⬜</span><div><strong>$500 USD acumulados</strong><p>Meta de validación real. Capa 3 activada en el sistema soberano.</p></div></div>
-        <div class="milestone" id="m6"><span class="m-check">⬜</span><div><strong>$1,000 USD acumulados</strong><p>El sistema funciona. Momento de escalar o especializarse más.</p></div></div>
+        <div class="milestone" id="m1"><span class="m-check">⬜</span><div><strong>Primer reporte enviado</strong><p>El primer paso. Aunque sea N/A — aprendes todo el proceso real de principio a fin.</p></div></div>
+        <div class="milestone" id="m2"><span class="m-check">⬜</span><div><strong>Primer reporte válido o informativo</strong><p>El triage lo acepta. Tu criterio empieza a funcionar y el sistema se valida.</p></div></div>
+        <div class="milestone" id="m3"><span class="m-check">⬜</span><div><strong>Primer bounty cobrado</strong><p>El primer dólar real. A partir de aquí el modelo está probado. Solo queda escalar.</p></div></div>
+        <div class="milestone" id="m4"><span class="m-check">⬜</span><div><strong>$100 USD acumulados</strong><p>Prueba de repetibilidad. Ya no fue suerte. Es un patrón. Documéntalo y repítelo.</p></div></div>
+        <div class="milestone" id="m5"><span class="m-check">⬜</span><div><strong>$500 USD acumulados</strong><p>Meta de validación del sistema. El hunting funciona como fuente de ingreso real.</p></div></div>
+        <div class="milestone" id="m6"><span class="m-check">⬜</span><div><strong>$1,000 USD acumulados</strong><p>El sistema funciona. Momento de especializarse, escalar y apuntar a programas privados.</p></div></div>
       </div>
     </div>
   </div>
@@ -566,13 +905,15 @@
 <footer class="footer">
   <div class="footer-inner">
     <p class="footer-logo">> BugBountyVault_</p>
-    <p class="footer-sub">Plataforma de inteligencia viva · 0xVanguard · Bogotá, Colombia</p>
+    <p class="footer-sub">Plataforma educativa de inteligencia viva · 0xVanguard · Bogotá, Colombia 🇨🇴</p>
     <div class="footer-links">
       <a href="https://github.com/0xvanguard/bug-bounty-vault" target="_blank">GitHub ↗</a>
       <a href="https://hackerone.com" target="_blank">HackerOne ↗</a>
-      <a href="https://portswigger.net/web-security" target="_blank">PortSwigger ↗</a>
+      <a href="https://portswigger.net/web-security" target="_blank">PortSwigger Academy ↗</a>
+      <a href="https://bugcrowd.com" target="_blank">Bugcrowd ↗</a>
     </div>
-    <p class="footer-stamp">RESPONSIBLE DISCLOSURE · CVD COMPLIANT · OWASP TOP 10 · CVSS v3.1 · ISO/IEC 29147</p>
+    <p class="footer-stamp">RESPONSIBLE DISCLOSURE · CVD COMPLIANT · OWASP TOP 10 · CVSS v3.1 · CWE · ISO/IEC 29147</p>
+    <p class="footer-copy">Este vault es para uso educativo y hunting ético en programas autorizados únicamente.</p>
   </div>
 </footer>
 
